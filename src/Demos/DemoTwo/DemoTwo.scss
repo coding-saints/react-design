@@ -1,0 +1,30 @@
+#demo-two-container {
+    background-color: #eee;
+    padding: 1rem 1rem;
+  
+    width: 100%;
+    margin: 0 auto;
+    .two-header {
+        h1 {
+            background-color: darken(steelblue, 10%);
+            color: #fff;
+            padding: 1.25rem;
+        }
+    }
+    .card-list {
+        width: 300px;
+        display: flex;
+        justify-content: flex-start;
+        barder: 1px solid black;
+        .card-list {
+            width: 100%;
+            flex-wrap: no-wrap;
+            .card {
+                flex: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+#demo-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 3rem;
+    background: mistyrose;
+    span {
+        flex-basis: 70%;
+        padding-left: 10px;
+        font: {
+            size: 2rem;
+            family: 'Cinzel'
+        }
+    }
+    .nav-link {
+        
+        a {
+            width: 2rem;
+            margin: 1rem;
+            padding: .5rem;
+            font-size: 1.3rem;
+            border-radius: 3%;
+            background: lightcoral;
+            color: #fff;
+            margin-top: 50%;
+            flex-basis: auto;
+            text-decoration: none;
+            list-style-type: none;
+        }
+    }
+}
