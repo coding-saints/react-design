@@ -1,6 +1,7 @@
 const commonConfig = require("./webpack.common");
 const UglifyJsWebpackPlugin = require("uglifyjs-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const merge = require("webpack-merge");
 
 const extractSass = new ExtractTextPlugin({
@@ -27,6 +28,10 @@ module.exports = merge(commonConfig, {
   },
   plugins: [
     new UglifyJsWebpackPlugin(),
-    extractSass
+    extractSass,
+    new CopyWebpackPlugin([
+      { from: "src/public/_redirects", to: "dist" }// , // Copy everything from src/public/static to dist folder
+      //{ from: require.resolve("workbox-sw"), to: "workbox-sw.prod.js" }
+    ])
   ]
 });
